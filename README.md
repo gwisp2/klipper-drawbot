@@ -23,6 +23,20 @@ As a result you should open fluidd interface in a web browser that connects succ
 
 Probably later there will be more detailed guide on that topic, but now use Google and read the manual if you encounter any problems.
 
+## Building and flashing firmware
+Steps to build firmware if you are using KIAUH:
+1. [Advanced]
+2. [Build + Flash]
+3. Configure:
+   ```
+   Enable extra low level configuration options
+   MCU Architecture: Atmega AVR
+   Processor model: atmega328p
+   Processor speed: 16 MHz
+   Baud rate for serial port: 115200 (note that Klipper recommends 250000, may be it'll work but I have not tested yet)
+   ```
+4. Build and flash
+
 ## Sample `printer.cfg`
 
 ### Description
@@ -41,6 +55,7 @@ SG90 servo and NC endstops are used.
 [mcu]
 # You may need to change this.
 serial: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
+# Has to be the same as in firmware
 # Note: 250000 may work too, but I have not tested. Modern Klipper guides recommend using 250000.
 baud: 115200
 
