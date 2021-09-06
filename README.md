@@ -74,8 +74,8 @@ dir_pin: PD5
 enable_pin: !PB0
 microsteps: 16
 rotation_distance: 32
-# endstop_pin is required even if you don't use endstops
-# Add ! after ^ is your use NO endstops instead of NC
+# endstop_pin is required even if you don't use endstops.
+# Add ! after ^ if your use NO endstops instead of NC.
 endstop_pin: ^PB1
 position_endstop: 0
 position_max: 360
@@ -87,8 +87,8 @@ dir_pin: PD6
 enable_pin: !PB0
 microsteps: 16
 rotation_distance: 32
-# endstop_pin is required even if you don't use endstops
-# Add ! after ^ is your use NO endstops instead of NC
+# endstop_pin is required even if you don't use endstops.
+# Add ! after ^ if your use NO endstops instead of NC.
 endstop_pin: ^PB2
 # No need to set home direction manually: Klipper understands correct direction by seeing that position_endstop = position_max
 position_endstop: 220
@@ -137,7 +137,7 @@ gcode:
 ## Troubleshooting
 1. Moves are performed in the wrong direction
    
-   Use may try to invert dir_step of stepper_x or stepper_y by prepending `!` before the value.
+   Use may try to invert dir_pin of stepper_x or stepper_y by prepending `!` before the value.
 2. Moves are still performed in the wrong direction. One axis moves correctly, but another one is inverted.
 
    Reconnect X stepper to Y driver and vice versa.
