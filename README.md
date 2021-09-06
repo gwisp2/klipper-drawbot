@@ -63,9 +63,10 @@ path: ~/gcode_files
 
 [printer]
 kinematics: corexy
-# Units: mm/s and mm/s^2, you may try to find values that are the best for your drawbot
-max_velocity: 100
-max_accel: 1000
+# Current values are quite slow, you may try to find values that are the best for your drawbot
+# Units: mm/s and mm/s^2
+max_velocity: 10
+max_accel: 300
 
 [stepper_x]
 step_pin: PD2
@@ -123,6 +124,10 @@ gcode:
 gcode:
   SET_SERVO SERVO=pen ANGLE=0
 
+# Add support for G2 and G3 commands
+[gcode_arcs]
+resolution: 1.0
+
 [display_status]
 
 [pause_resume]
@@ -140,7 +145,6 @@ gcode:
 # set_position_y: 0
 # set_position_z: 0
 # gcode: 
-
 ```
 
 ## Troubleshooting
