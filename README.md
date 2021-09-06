@@ -33,7 +33,7 @@ Steps to build firmware if you are using KIAUH:
    MCU Architecture: Atmega AVR
    Processor model: atmega328p
    Processor speed: 16 MHz
-   Baud rate for serial port: 115200 (note that Klipper recommends 250000, may be it'll work but I have not tested yet)
+   Baud rate for serial port: 250000 
    ```
 4. Build and flash
 
@@ -56,8 +56,7 @@ SG90 servo and NC endstops are used.
 # You may need to change this.
 serial: /dev/serial/by-id/usb-1a86_USB_Serial-if00-port0
 # Has to be the same as in firmware
-# Note: 250000 may work too, but I have not tested. Modern Klipper guides recommend using 250000.
-baud: 115200
+baud: 250000
 
 [virtual_sdcard]
 path: ~/gcode_files
