@@ -123,6 +123,16 @@ gcode:
 gcode:
   SET_SERVO SERVO=pen ANGLE=0
 
+[display_status]
+
+[pause_resume]
+
+# Cancelling drawing works without this macro, but fluidd will complain
+[gcode_macro CANCEL_PRINT]
+rename_existing: BASE_CANCEL_PRINT
+gcode:
+  BASE_CANCEL_PRINT
+
 # Uncomment the following lines if you don't have endstops.
 # In that case homing will do nothing but reset position to (0, 0)
 # [homing_override]
