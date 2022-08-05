@@ -1,4 +1,5 @@
 # Klipper + DrawBot
+Note: I played enough with my drawing robot and disassembled it so I won't update this repository in case if something breaks in newer klipper versions.
 
 ## Related links
 
